@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelPalette - Interactive Digital Art Canvas</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>PixelPalette</h1>
+            <div class="file-operations">
+                <button id="new-canvas">New</button>
+                <button id="save-canvas">Save</button>
+                <button id="export-canvas">Export</button>
+            </div>
+        </header>
+        
+        <main>
+            <div class="toolbar">
+                <div class="tool-section">
+                    <h3>Tools</h3>
+                    <div class="tools">
+                        <button class="tool-btn active" id="brush" title="Brush">🖌️</button>
+                        <button class="tool-btn" id="pencil" title="Pencil">✏️</button>
+                        <button class="tool-btn" id="eraser" title="Eraser">🧽</button>
+                        <button class="tool-btn" id="line" title="Line">📏</button>
+                        <button class="tool-btn" id="rectangle" title="Rectangle">⬜</button>
+                        <button class="tool-btn" id="circle" title="Circle">⭕</button>
+                        <button class="tool-btn" id="fill" title="Fill">🪣</button>
+                        <button class="tool-btn" id="eyedropper" title="Color Picker">👁️</button>
+                    </div>
+                </div>
+                
+                <div class="tool-section">
+                    <h3>Colors</h3>
+                    <div class="color-picker">
+                        <input type="color" id="color-selector" value="#000000">
+                        <div class="color-palette">
+                            <span class="color-swatch" style="background-color: #000000;"></span>
+                            <span class="color-swatch" style="background-color: #ff0000;"></span>
+                            <span class="color-swatch" style="background-color: #00ff00;"></span>
+                            <span class="color-swatch" style="background-color: #0000ff;"></span>
+                            <span class="color-swatch" style="background-color: #ffff00;"></span>
+                            <span class="color-swatch" style="background-color: #ff00ff;"></span>
+                            <span class="color-swatch" style="background-color: #00ffff;"></span>
+                            <span class="color-swatch" style="background-color: #ffffff;"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tool-section">
+                    <h3>Brush Size</h3>
+                    <input type="range" id="brush-size" min="1" max="50" value="5">
+                    <span id="brush-size-display">5px</span>
+                </div>
+                
+                <div class="tool-section">
+                    <h3>Opacity</h3>
+                    <input type="range" id="opacity" min="0" max="100" value="100">
+                    <span id="opacity-display">100%</span>
+                </div>
+                
+                <div class="tool-section">
+                    <h3>Layers</h3>
+                    <div class="layers-container">
+                        <div class="layer active">Layer 1</div>
+                        <button id="add-layer">Add Layer</button>
+                    </div>
+                </div>
+                
+                <div class="history-buttons">
+                    <button id="undo" title="Undo">↩️</button>
+                    <button id="redo" title="Redo">↪️</button>
+                </div>
+            </div>
+            
+            <div class="canvas-container">
+                <canvas id="art-canvas"></canvas>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Created for Hackathon 2025</p>
+        </footer>
+    </div>
+
+    <script src="scripts/app.js" type="module"></script>
+</body>
+</html>
