@@ -7,6 +7,7 @@ import { ExportManager } from './export.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('art-canvas');
+    console.log("Canvas found:", canvas);
     const canvasContainer = document.querySelector('.canvas-container');
     
     // Initialize managers
